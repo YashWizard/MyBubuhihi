@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f6cdda" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="A little monthsary surprise for Glaiza." />
+  <title>Happy Monthsary, Zaizaii</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="ambience" id="ambience" aria-hidden="true"></div>
+  
+  <div class="seal-overlay" id="sealOverlay">
+    <div class="seal-stack">
+      <button class="wax-seal" id="waxSeal" aria-label="Open the surprise">
+        <span class="wax-seal-heart" aria-hidden="true">&#10084;</span>
+      </button>
+      <p class="seal-hint">Tap to open!</p>
+    </div>
+  </div>
+
+  <main class="hero" id="hero">
+    <section class="hero-card" id="heroCard">
+      <p class="eyebrow" data-reveal>a little surprise for</p>
+
+      <h2 class="name-script" data-reveal>Glaiza</h2>
+
+      <h1 class="hero-title" data-reveal>Happy 2nd&nbsp;Monthsary</h1>
+
+      <p class="hero-message" data-reveal>
+        Happy 2nd Monthsary, Zaizaii. This little website is made with love just for you.
+      </p>
+
+      <div class="hero-actions" data-reveal>
+        <a class="btn btn-primary" href="letter.html">Read My Letter</a>
+        <a class="btn btn-secondary" href="gallery.html">My Favorite Photo of you</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-reveal>made with <span aria-hidden="true">&#10084;</span> for Glaiza</footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
