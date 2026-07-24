@@ -1,0 +1,144 @@
+.pin-wrap {
+  position: relative;
+  z-index: 2;
+  min-height: calc(100svh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem var(--space-page) 3rem;
+}
+
+.pin-card {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255, 253, 249, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 2.6rem 1.75rem;
+  text-align: center;
+  animation: pin-card-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+@keyframes pin-card-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.pin-card.unlocking {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+.pin-icon {
+  font-size: 2.1rem;
+  margin-bottom: 0.4rem;
+  filter: drop-shadow(0 4px 10px rgba(122, 46, 63, 0.25));
+}
+
+.pin-heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 6vw, 1.9rem);
+  color: var(--burgundy-900);
+  margin: 0 0 0.5rem;
+}
+
+.pin-subtitle {
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 auto 1.85rem;
+  max-width: 30ch;
+}
+
+.pin-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+
+.pin-boxes.shake {
+  animation: pin-shake 0.4s ease;
+}
+
+@keyframes pin-shake {
+  10%,
+  90% {
+    transform: translateX(-1px);
+  }
+  20%,
+  80% {
+    transform: translateX(2px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
+}
+
+.pin-box {
+  width: 3.1rem;
+  height: 3.6rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--burgundy-700);
+  background: var(--paper);
+  border: 2px solid var(--pink-300);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pin-box:focus {
+  outline: none;
+  border-color: var(--burgundy-500);
+  box-shadow: 0 0 0 4px rgba(156, 74, 92, 0.15);
+}
+
+.pin-error {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--burgundy-700);
+  background: var(--pink-100);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  margin: 0 auto 1.35rem;
+  max-width: fit-content;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.pin-error.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pin-submit {
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .pin-card {
+    padding: 3.1rem 2.5rem;
+  }
+}

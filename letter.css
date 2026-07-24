@@ -1,0 +1,108 @@
+.letter-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem var(--space-page) 3rem;
+  min-height: calc(100svh - 64px);
+  align-items: center;
+}
+
+.letter-card {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 3rem 1.75rem 2.25rem;
+  text-align: center;
+  animation: unfoldIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes unfoldIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) rotateX(6deg) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0) translateY(0);
+  }
+}
+
+.wax-stamp {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, var(--burgundy-500), var(--burgundy-900) 78%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--butter-200);
+  font-size: 1.3rem;
+  box-shadow: 0 10px 22px rgba(78, 28, 41, 0.35), 0 0 0 5px var(--paper);
+}
+
+.letter-heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 6vw, 2.1rem);
+  color: var(--burgundy-900);
+  margin: 0.75rem 0 0.6rem;
+}
+
+.letter-salutation {
+  font-family: var(--font-script);
+  font-size: clamp(1.5rem, 6vw, 1.8rem);
+  color: var(--burgundy-500);
+  margin-bottom: 1.5rem;
+}
+
+.letter-body {
+  text-align: left;
+}
+
+.letter-body p {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: var(--ink);
+  margin-bottom: 1.15em;
+}
+
+.letter-body p:last-child {
+  margin-bottom: 0;
+}
+
+.letter-signature {
+  margin-top: 2.25rem;
+  text-align: right;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.9;
+}
+
+.name-script.small {
+  font-family: var(--font-script);
+  font-size: 1.6rem;
+  color: var(--burgundy-700);
+}
+
+@media (min-width: 480px) {
+  .letter-card {
+    padding: 3.5rem 3rem 2.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .letter-card {
+    padding: 4rem 3.75rem 3rem;
+  }
+}
