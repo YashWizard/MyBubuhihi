@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f6cdda" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="A little secret for Glaiza." />
+  <title>A Little Secret</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="pin.css" />
+</head>
+<body>
+  <div class="ambience" id="ambience" aria-hidden="true"></div>
+
+  <nav class="top-nav">
+    <a class="nav-link" href="gallery.html">&larr; Back to Gallery</a>
+  </nav>
+
+  <main class="pin-wrap">
+    <section class="pin-card" id="pinCard">
+      <div class="pin-icon" aria-hidden="true">&#128274;</div>
+      <h1 class="pin-heading">A Little Secret hehe</h1>
+      <p class="pin-subtitle">Enter the month and day nung una tayo nag kita</p>
+
+      <form class="pin-form" id="pinForm" autocomplete="off" novalidate>
+        <div class="pin-boxes" id="pinBoxes">
+          <input class="pin-box" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Digit 1" />
+          <input class="pin-box" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Digit 2" />
+          <input class="pin-box" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Digit 3" />
+          <input class="pin-box" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Digit 4" />
+        </div>
+
+        <p class="pin-error" id="pinError" role="alert">Wrong, ikaw ah you don't love me anymore:<</p>
+
+        <button type="submit" class="btn btn-primary pin-submit">Unlock</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">made with <span aria-hidden="true">&#10084;</span> for Glaiza</footer>
+
+  <script src="pin.js"></script>
+</body>
+</html>
