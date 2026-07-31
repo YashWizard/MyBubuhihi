@@ -60,10 +60,12 @@
 }
 
 @keyframes sealPulse {
+
   0%,
   100% {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 0 6px rgba(245, 227, 171, 0.12);
   }
+
   50% {
     box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35), 0 0 0 14px rgba(245, 227, 171, 0.2);
   }

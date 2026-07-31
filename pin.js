@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var CORRECT_PIN = "0524";
+  var CORRECT_PIN = "2426";
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
