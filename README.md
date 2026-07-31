@@ -1,4 +1,5 @@
 # 2nd-Monthsary-with-my-BuBu
-A simple website for our monthsary.
 
-https://ajdevzz.github.io/2nd-Monthsary-with-my-yash/
+A Lovely website for our monthsary.
+
+[https://YashWizard.github.io/MyBubuhihi/](https://YashWizard.github.io/MyBubuhihi/)
